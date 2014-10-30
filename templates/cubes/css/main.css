@@ -46,7 +46,7 @@ img {
 */
 body {
     font-family: 'Roboto Slab';
-    min-height: 740px;
+    min-height: 7400px;
     background: #676767;
     color: #eee;
 }
@@ -189,9 +189,11 @@ a:focus {
 .cube-text {
     padding: 20px 20px;
     display: block;
-    width: 700px;
-    height: 700px;
+    width: 1000px;
+    height: 1000px;
 }
+
+
 
 /* The thing we present on */
 .slide {
@@ -247,6 +249,19 @@ p {
     color: #aaa;
     font-size: 34px;
     padding-left: 30px;
+}
+
+.cube-side h2, .cube-text h2 {
+    margin-top: 60px;
+    line-height: 100px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.cube-side p, .cube-text p {
+    font-size: 40px;
+    margin: 30px 20px;
+    color: inherit;
 }
 
 h2 {
@@ -349,5 +364,13 @@ pre {
 
 .impress-enabled #impress {
     pointer-events: auto
+}
+
+.no-support-message {
+    display: none;
+}
+
+.impress-not-supported .no-support-message {
+    display: block;
 }
 
