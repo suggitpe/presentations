@@ -175,9 +175,9 @@ a:focus {
     display: block;
     padding: 20px 20px;
 
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(252, 197, 89)), to(rgb(247, 168, 13)));
-    background: radial-gradient(circle, rgb(252, 197, 89), rgb(247, 168, 13));
-    box-shadow: inset 0px 0px 20px 5px rgb(195, 129, 0);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(193, 240, 252)), to(rgb(129, 182, 247)));
+    background: radial-gradient(circle, rgb(193, 240, 252), rgb(129, 182, 247));
+    box-shadow: inset 0px 0px 20px 5px rgb(111, 161, 195);
     width: 1000px;
     height: 1000px;
 
@@ -220,7 +220,7 @@ a:focus {
     height: 700px;
     padding: 20px 20px;
 
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
