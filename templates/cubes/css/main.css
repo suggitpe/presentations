@@ -178,8 +178,8 @@ a:focus {
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(252, 197, 89)), to(rgb(247, 168, 13)));
     background: radial-gradient(circle, rgb(252, 197, 89), rgb(247, 168, 13));
     box-shadow: inset 0px 0px 20px 5px rgb(195, 129, 0);
-    width: 700px;
-    height: 700px;
+    width: 1000px;
+    height: 1000px;
 
     n-border: 1px solid rgba(0, 0, 0, .3);
     n-border-radius: 5px;
@@ -197,9 +197,10 @@ a:focus {
 .slide {
     display: block;
 
-    width: 620px;
-    height: 620px;
-    padding: 20px 20px;
+    padding: 100px 100px;
+
+    width: 800px;
+    height: 800px;
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
