@@ -24,9 +24,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
@@ -52,10 +54,22 @@ body {
 /*
     Now let's bring some text styles back ...
 */
-b, strong { font-weight: bold }
-i, em { font-style: italic }
+b, strong {
+    font-weight: bold
+}
 
-code { font-family: monospace; background: #333; padding: 0 5px; margin: 0 2px; border-radius: 3px;}
+i, em {
+    font-style: italic
+}
+
+code {
+    font-family: monospace;
+    background: #333;
+    padding: 0 5px;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
 /*
     ... and give links a nice look.
 */
@@ -63,21 +77,21 @@ a {
     color: inherit;
     text-decoration: none;
     padding: 0 0.1em;
-    background: rgba(255,255,255,0.5);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    background: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px -1px 2px rgba(100, 100, 100, 0.9);
     border-radius: 0.2em;
 
     -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
 
 a:hover,
 a:focus {
-    background: rgba(255,255,255,1);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+    background: rgba(255, 255, 255, 1);
+    text-shadow: -1px -1px 2px rgba(100, 100, 100, 0.5);
 }
 
 /*
@@ -126,10 +140,10 @@ a:focus {
     margin: 20px auto;
 
     -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 
     font-size: 48px;
     line-height: 1.5;
@@ -146,28 +160,37 @@ a:focus {
     opacity: 0.95;
 
     -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
 }
 
-.impress-enabled .step.active { opacity: 1 }
+.impress-enabled .step.active {
+    opacity: 1
+}
 
 /* The side of the cube */
 .cube-side {
     display: block;
     padding: 20px 20px;
 
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(252,197,89)), to(rgb(247,168,13)));
-    background: radial-gradient(circle, rgb(252,197,89), rgb(247,168,13));
-    box-shadow: inset 0px 0px 20px 5px rgb(195,129,0);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(252, 197, 89)), to(rgb(247, 168, 13)));
+    background: radial-gradient(circle, rgb(252, 197, 89), rgb(247, 168, 13));
+    box-shadow: inset 0px 0px 20px 5px rgb(195, 129, 0);
     width: 700px;
     height: 700px;
 
     n-border: 1px solid rgba(0, 0, 0, .3);
     n-border-radius: 5px;
     n-box-shadow: 4px 4px 12px rgba(0, 0, 0, .3);
+}
+
+.cube-text {
+    padding: 20px 20px;
+    display: block;
+    width: 700px;
+    height: 700px;
 }
 
 /* The thing we present on */
@@ -194,7 +217,7 @@ a:focus {
     height: 700px;
     padding: 20px 20px;
 
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
@@ -208,7 +231,7 @@ a:focus {
 }
 
 p {
-    font-size:30px;
+    font-size: 30px;
     margin: 30px 20px;
 }
 
@@ -218,6 +241,7 @@ p {
     font-size: 40px;
     font-weight: bold;
 }
+
 .title h2 {
     color: #aaa;
     font-size: 34px;
@@ -225,12 +249,13 @@ p {
 }
 
 h2 {
-    font-size:34px;
+    font-size: 34px;
 }
 
 svg.fadein {
     opacity: 0;
 }
+
 svg .link {
     fill: none;
     stroke-linejoin: round;
@@ -249,11 +274,11 @@ svg .link {
 }
 
 .present .real-fade {
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 1;
 }
 
@@ -263,7 +288,6 @@ svg .link {
     -webkit-transition-property: opacity;
     opacity: 1;
 }
-
 
 .footnote {
     position: absolute;
@@ -296,24 +320,33 @@ pre {
     display: inline-block;
     border-radius: 8px;
     width: 340px;
-    line-height:50px;
+    line-height: 50px;
     height: 50px;
     margin-bottom: 10px;
     position: relative;
 }
+
 #function svg {
     width: 440px;
     height: 120px;
     position: relative;
     top: 55px;
 }
+
 #functioncontext svg {
     width: 800px;
     height: 140px;
 }
 
-#overview { display: none }
+#overview {
+    display: none
+}
 
-.impress-enabled          { pointer-events: none }
-.impress-enabled #impress { pointer-events: auto }
+.impress-enabled {
+    pointer-events: none
+}
+
+.impress-enabled #impress {
+    pointer-events: auto
+}
 
