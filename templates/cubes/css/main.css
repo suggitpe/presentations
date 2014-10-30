@@ -175,9 +175,9 @@ a:focus {
     display: block;
     padding: 20px 20px;
 
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(193, 240, 252)), to(rgb(129, 182, 247)));
-    background: radial-gradient(circle, rgb(193, 240, 252), rgb(129, 182, 247));
-    box-shadow: inset 0px 0px 20px 5px rgb(111, 161, 195);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(193, 240, 252)), to(rgb(158, 221, 247)));
+    background: radial-gradient(circle, rgb(205, 252, 249), rgb(153, 203, 247));
+    box-shadow: inset 0px 0px 20px 5px rgb(119, 183, 195);
     width: 1000px;
     height: 1000px;
 
@@ -201,8 +201,8 @@ a:focus {
 
     padding: 100px 100px;
 
-    width: 800px;
-    height: 800px;
+    width: 750px;
+    height: 750px;
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
@@ -266,6 +266,7 @@ p {
 
 h2 {
     font-size: 34px;
+    text-align: center;
 }
 
 svg.fadein {
