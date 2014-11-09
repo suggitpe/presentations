@@ -53,7 +53,7 @@
 
             <p class="fragment roll-in">Worked many roles across a number of departments</p>
 
-            <p class="fragment roll-in">Now I spend lot of thinking about Software Engineering</p>
+            <p class="fragment roll-in">Now I spend a lot of time thinking about Software Engineering</p>
 
             <p class="fragment roll-in">I like helping teams solve problems</p>
         </section>
@@ -62,7 +62,7 @@
             <p>... and yes ... it's Movember </p>
             <img class="fragment roll-in" src="images/mo.jpg"/>
 
-            <p>we all know its ridiculous, please ignore it</p>
+            <p>we all know it looks ridiculous, please ignore it</p>
         </section>
 
         <section data-background="images/sausage.jpg">
@@ -83,7 +83,7 @@
 
                 <p class="fragment roll-in">... more quickly</p>
 
-                <p class="fragment roll-in">... and with higher quality</p>
+                <p class="fragment roll-in">... and higher quality</p>
             </section>
             <section><h2>They don't ask for much !!!</h2></section>
             <section><h2>This is where automation comes in</h2></section>
@@ -96,7 +96,7 @@
             </section>
         </section>
 
-        <section data-background="">
+        <section>
             <section><h1>Automation</h1></section>
             <section>
                 <blockquote cite="http://www.merriam-webster.com/dictionary/automation">&ldquo;automatically controlled
@@ -118,6 +118,11 @@
 
                 <p class="fragment roll-in">... all of the above?</p>
             </section>
+
+            <section>
+                <h2>Avoid going nuts</h2>
+                <img class="fragment" src="images/automate-all-the-things.png">
+            </section>
             <section>
                 <h2>Some things should not be automated</h2>
                 <img class="fragment" src="images/silly-automation.jpg">
@@ -130,11 +135,11 @@
                 <p class="fragment roll-in">... we work in I.T., remember?</p>
             </section>
             <section>
-                <h2>The real question is</h2>
+                <h2>The real question is ...</h2>
 
-                <p class="fragment roll-in grow">... where do we start?</p>
+                <p class="fragment roll-in grow">where do we start?</p>
 
-                <p class="fragment roll-in grow">... this is where the Value Chain comes in</p>
+                <p class="fragment roll-in grow">This is where the Value Chain comes in</p>
             </section>
         </section>
 
@@ -144,9 +149,9 @@
             <section>
                 <h2>What is the true value of the products we make?</h2>
 
-                <p class="fragment roll-in">whats the true value in a sausage?</p>
+                <p class="fragment roll-in">what's the true value in a sausage?</p>
 
-                <p class="fragment roll-in">whats the true value in a drill bit?</p>
+                <p class="fragment roll-in">what's the true value in a drill bit?</p>
 
                 <aside class="notes">Value in a sausage is the sustenance: value in a drill bit comes from holes in a
                     wall
@@ -189,21 +194,111 @@
                     <li class="fragment">management of environments?</li>
                     <li class="fragment">code creation?</li>
                 </ul>
-                <p> </p>
+                <p></p>
+
                 <h2 class="fragment">Use the Value Chain to prioritise</h2>
                 <aside class="notes">Code creation failures ... Java == 3GL plus compiler</aside>
             </section>
         </section>
 
-        <section data-background="images/dark-chain.jpg">
-            <section><h1>This is what we found</h1></section>
+        <section>
+            <section><h1>Our Value Chain</h1></section>
+            <section>
+                <h2>We got everyone in a room and built our Value Chain</h2>
+
+                <p class="fragment roll-in">... it took a long time to build it</p>
+
+                <p class="fragment roll-in">... but we found a number of problems</p>
+
+                <p class="fragment roll-in">Lots of opportunities for improvement!</p>
+            </section>
+
+            <section>
+                <h2>This is our Value Chain</h2>
+                <img src="images/yak-shaving.jpg"/>
+
+            </section>
+
+            <section>
+                <h2>Problem #1</h2>
+
+                <h3>Releases to environments were not standardised</h3>
+                <ul>
+                    <li class="fragment roll-in">Unreliable</li>
+                    <li class="fragment roll-in">Hard to repeat</li>
+                    <li class="fragment roll-in">Every release was different</li>
+                    <li class="fragment roll-in">Production Services were stressed !!!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Simplified the release process</h2>
+            </section>
+            <section>
+                <h3>Principles Learned</h3>
+                <ul>
+                    <li class="fragment roll-in">
+                        <blockquote>Releases to all environments must be the same, focus on simplicity and
+                            repeatability.
+                        </blockquote>
+                    </li>
+                    <li class="fragment roll-in">
+                        <blockquote>Production Services should be bored all the time.</blockquote>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Problem #2</h2>
+
+                <h3>Automated tests require lots of team time</h3>
+                <ul>
+                    <li class="fragment roll-in">Data driven rather than intent driven</li>
+                    <li class="fragment roll-in">All end to end system tests</li>
+                    <li class="fragment roll-in">Slow to run</li>
+                    <li class="fragment roll-in">Fragile</li>
+                    <li class="fragment roll-in">Development Teams were stressed !!!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Problem #3</h2>
+
+                <h3>CI builds are always broken</h3>
+                <ul>
+                    <li class="fragment roll-in">Following strict CI technique</li>
+                    <li class="fragment roll-in">17 globally dispersed dev teams</li>
+                    <li class="fragment roll-in">"Unstable trunk" branching strategy</li>
+                    <li class="fragment roll-in">Technology Leads were stressed !!!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Problem #4</h2>
+
+                <h3>We don't have enough environments</h3>
+                <ul>
+                    <li class="fragment roll-in">Dev teams need their own test environment</li>
+                    <li class="fragment roll-in">We only had 2: 17 / 2 ???</li>
+                    <li class="fragment roll-in">Everyone was stressed !!!</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Problem #5</h2>
+
+                <h3>Too much admin to release every month</h3>
+                <ul>
+                    <li class="fragment roll-in">Mysterious audit requirements</li>
+                    <li class="fragment roll-in">SOX(es) evidence to collate</li>
+                    <li class="fragment roll-in">Release plans and notes to draft</li>
+                    <li class="fragment roll-in">Management was stressed !!!</li>
+                </ul>
+            </section>
+
         </section>
 
         <section data-background="images/take-away-menu.jpg">
             <section><h1>Something to take away</h1></section>
             <section><h2>Don't automate for the sake of it</h2></section>
             <section>
-                <h2>Use force Luke!</h2>
+                <h2>Use The Force, Luke!</h2>
 
                 <p class="fragment roll-in">Use facts</p>
 
