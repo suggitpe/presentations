@@ -414,6 +414,7 @@
 
                 <p>Continuous Integration vs. Feature Branches</p>
             </section>
+
             <section>
                 <h2>Be done on the branch</h2>
 
@@ -432,7 +433,19 @@
                 <h3 class="fragment roll-in">Done means you can put this live now!</h3>
             </section>
             <section>
-                <h2>Our Continuous Integration build</h2>
+                <h2>Testing on each branch</h2>
+
+                <p class="fragment roll-in">... wow thats a lot of testing</p>
+            </section>
+            <section>
+                <h2>Build pipeline</h2>
+
+                <p>This is our sausage machine!!!</p>
+                <img src="images/BuildPipeline.png"/>
+
+            </section>
+            <section>
+                <h2>Our Pipeline Radiator</h2>
                 <img src="images/build-radiator.png">
             </section>
 
@@ -465,28 +478,71 @@
 
                 <h3>We don't have enough environments</h3>
                 <ul>
-                    <li class="fragment roll-in">Dev teams need their own test environment</li>
-                    <li class="fragment roll-in">We only had 2: 17 / 2 ???</li>
+                    <li class="fragment roll-in">Feature teams need their own test environments</li>
+                    <li class="fragment roll-in">We only had 2 static environments ... 17 teams</li>
                     <li class="fragment roll-in">Everyone was stressed !!!</li>
                 </ul>
             </section>
+
             <section>
-                <h2>Virtualisation</h2>
+                <h2>We don't need dedicated testing environments</h2>
+
+                <p class="fragment roll-in">we sometimes need environments for short periods of time</p>
+
+                <p class="fragment roll-in">... with specific features in them</p>
+
+                <h3 class="fragment roll-in">Static environments are too ... static</h3>
+            </section>
+
+            <section>
+                <h2>Pets and cattle</h2>
+                <blockquote>CERN Data Center Evolution</blockquote>
             </section>
             <section>
-                <h2>Pets and Cattle</h2>
+                <h2>Today, we only have pets</h2>
+
+                <div class="fragment roll-in">
+                    <p>Our static environments:</p>
+                    <ul>
+                        <li><q>have names</q></li>
+                        <li><q>have personal attendents</q></li>
+                        <li><q>are regularly groomed</q></li>
+                        <li><q>if they are ill we nurse them back to health</q></li>
+                        <li><q>when we have finished playing with them they wait for us</q></li>
+                    </ul>
+                </div>
             </section>
+            <section>
+                <h2>For testing we need cattle</h2>
+
+                <div class="fragment roll-in">
+                    <p>Our environments should:</p>
+                    <ul>
+                        <li><q>have numbers</q></li>
+                        <li><q>live in a herd</q></li>
+                        <li><q>when they are ill we get another one from the herd</q></li>
+                        <li><q>when we have finished playing with them we get another one</q></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Our servers are resources, we should treat them like that.</h2>
+            </section>
+            <section>
+                <h2>With the help of CTO we built a prototype</h2>
+                <p class="fragment roll-in">... it happens to use Open Stack</p>
+                <p class="fragment roll-in">... it happens to build an environment from nothing in around 3 minutes</p>
+                <p class="fragment roll-in">... we are looking at Docker as an enabling technology for scaling common things</p>
+            </section>
+
             <section>
                 <h3>Principles Learned</h3>
                 <ul>
                     <li class="fragment roll-in">
-                        <blockquote>Infrastructure as code</blockquote>
+                        <blockquote>Test environments should be treated as a disposable resource: used on demand and then thrown away.</blockquote>
                     </li>
                     <li class="fragment roll-in">
-                        <blockquote>Test prod cfg</blockquote>
-                    </li>
-                    <li class="fragment roll-in">
-                        <blockquote></blockquote>
+                        <blockquote>Infrastructure as code: never change an environment, throw it away and create a new one.</blockquote>
                     </li>
                 </ul>
             </section>
