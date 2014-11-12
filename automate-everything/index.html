@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -191,7 +191,7 @@
             </section>
         </section>
 
-        <section data-background="images/chain.jpg">
+        <section data-background="images/dark-chain.jpg">
             <section><h1>The Value Chain</h1></section>
             <section><h2>First we need to understand value</h2></section>
             <section>
@@ -326,6 +326,7 @@
             <section>
                 <h2>The testing quadrant</h2>
                 <img src="images/Agile-Testing-Quadrants.png">
+                <blockquote>Lisa Crispin & Janet Gregory</blockquote>
             </section>
             <section>
                 <h2>The testing pyramid</h2>
@@ -478,7 +479,7 @@
 
                 <h3>We don't have enough environments</h3>
                 <ul>
-                    <li class="fragment roll-in">Feature teams need their own test environments</li>
+                    <li class="fragment roll-in">Feature teams need their own environments</li>
                     <li class="fragment roll-in">We only had 2 static environments ... 17 teams</li>
                     <li class="fragment roll-in">Everyone was stressed !!!</li>
                 </ul>
@@ -497,6 +498,7 @@
             <section>
                 <h2>Pets and cattle</h2>
                 <blockquote>CERN Data Center Evolution</blockquote>
+
             </section>
             <section>
                 <h2>Today, we only have pets</h2>
@@ -521,7 +523,7 @@
                         <li><q>have numbers</q></li>
                         <li><q>live in a herd</q></li>
                         <li><q>when they are ill we get another one from the herd</q></li>
-                        <li><q>when we have finished playing with them we get another one</q></li>
+                        <li><q>when we have finished playing with them we put them back in the herd</q></li>
                     </ul>
                 </div>
             </section>
@@ -530,47 +532,44 @@
             </section>
             <section>
                 <h2>With the help of CTO we built a prototype</h2>
+
                 <p class="fragment roll-in">... it happens to use Open Stack</p>
-                <p class="fragment roll-in">... it happens to build an environment from nothing in around 3 minutes</p>
-                <p class="fragment roll-in">... we are looking at Docker as an enabling technology for scaling common things</p>
+
+                <p class="fragment roll-in">... it builds environments from nothing in around 3 minutes</p>
+
+                <p class="fragment roll-in">... we are looking at Docker for scaling common things</p>
             </section>
 
             <section>
                 <h3>Principles Learned</h3>
                 <ul>
                     <li class="fragment roll-in">
-                        <blockquote>Test environments should be treated as a disposable resource: used on demand and then thrown away.</blockquote>
+                        <blockquote>Test environments should be treated as a disposable resource: used on demand and
+                            then thrown away.
+                        </blockquote>
                     </li>
                     <li class="fragment roll-in">
-                        <blockquote>Infrastructure as code: never change an environment, throw it away and create a new one.</blockquote>
+                        <blockquote>Infrastructure as code: never change an environment, throw it away and create a new
+                            one from a template.
+                        </blockquote>
                     </li>
                 </ul>
             </section>
 
-            <section>
-                <h2>Problem #5 from the Value Chain</h2>
+        </section>
 
-                <h3>Too much admin to release every month</h3>
-                <ul>
-                    <li class="fragment roll-in">Mysterious audit requirements</li>
-                    <li class="fragment roll-in">SOX(es) evidence to collate</li>
-                    <li class="fragment roll-in">Release plans and notes to draft</li>
-                    <li class="fragment roll-in">Management was stressed !!!</li>
-                </ul>
-            </section>
+        <section>
+            <section data-background="images/jerrymaguire.jpg"></section>
             <section>
-                <h3>Principles Learned</h3>
-                <ul>
-                    <li class="fragment roll-in">
-                        <blockquote></blockquote>
-                    </li>
-                    <li class="fragment roll-in">
-                        <blockquote></blockquote>
-                    </li>
-                    <li class="fragment roll-in">
-                        <blockquote></blockquote>
-                    </li>
-                </ul>
+                <h2>We have removed CHF 250K p.a. of waste</h2>
+
+                <p class="fragment roll-in">No budget</p>
+
+                <p class="fragment roll-in">No permission sought</p>
+
+                <p class="fragment roll-in">No project managers</p>
+
+                <h3 class="fragment roll-in">Continuous Improvement is a part of the culture</h3>
             </section>
 
         </section>
@@ -597,8 +596,9 @@
 
         </section>
 
-        <section data-background="images/thats-all-folks.jpg">
-
+        <section>
+            <h2>The biggest principle we employed</h2>
+            <blockquote class="fragment roll-in">Don't ask for permission to do the right thing</blockquote>
         </section>
 
     </div>
