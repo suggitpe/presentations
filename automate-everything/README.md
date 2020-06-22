@@ -1,5 +1,5 @@
 # Automate everything
-by Pete Suggitt
+by Pete Suggitt 
 
 
 ## Introduction
