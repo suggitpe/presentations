@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Professional Impress.js Presentation with TOC</title>
+    <title>Impress.js Presentation</title>
     <meta name="viewport" content="width=1024">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+            background: linear-gradient(135deg, #502379, #341754);
             color: #333;
             font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
@@ -18,13 +18,15 @@
             width: 900px;
             padding: 50px;
             border-radius: 16px;
-            background: #fdfdf8; /* ivory */
+            background: #fff; /* clean white for slides */
             color: #222;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             text-align: center;
+            border-top: 6px solid #ec008c; /* pink accent */
         }
         h1, h2 {
             margin: 0.4em 0;
+            color: #502379;
         }
         p {
             font-size: 18px;
@@ -35,10 +37,10 @@
         .sidebar {
             position: fixed;
             top: 0;
-            left: -260px; /* hidden by default */
+            left: -260px;
             width: 240px;
             height: 100%;
-            background: #2c2c2c;
+            background: #341754; /* darker purple */
             color: #fff;
             padding: 20px;
             box-shadow: 4px 0 12px rgba(0,0,0,0.5);
@@ -52,6 +54,7 @@
             margin-top: 0;
             font-size: 20px;
             margin-bottom: 15px;
+            color: #ff4f9a; /* magenta */
         }
         .sidebar button {
             display: block;
@@ -69,7 +72,7 @@
         }
         .sidebar button:hover,
         .sidebar button.active {
-            background: #4cafef;
+            background: #ec008c; /* pink highlight */
         }
 
         /* Menu toggle button */
@@ -77,7 +80,7 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            background: #4cafef;
+            background: #ec008c; /* pink accent */
             border: none;
             color: #fff;
             width: 45px;
@@ -93,7 +96,7 @@
             transition: background 0.3s, transform 0.2s;
         }
         .menu-toggle:hover {
-            background: #3498db;
+            background: #ff4f9a;
             transform: scale(1.1);
         }
 
@@ -108,7 +111,7 @@
             z-index: 1000;
         }
         .nav-icons button {
-            background: #4cafef;
+            background: #502379; /* purple */
             border: none;
             color: #fff;
             width: 50px;
@@ -123,7 +126,7 @@
             transition: background 0.3s, transform 0.2s;
         }
         .nav-icons button:hover {
-            background: #3498db;
+            background: #ec008c;
             transform: scale(1.1);
         }
         .hidden {
@@ -147,7 +150,7 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background: #4cafef;
+            background: #ec008c; /* pink */
             transition: width 0.4s ease;
         }
 
@@ -176,8 +179,8 @@
 <div id="impress">
 
     <div id="intro" class="step" data-x="0" data-y="0">
-        <h1>Welcome</h1>
-        <p>This is a professional Impress.js presentation template.</p>
+        <h1>Welcome to Acme Bank Stock</h1>
+        <p>Professional Impress.js presentation template with NatAcme Bank branding.</p>
     </div>
 
     <div id="agenda" class="step" data-x="1200" data-y="0">
