@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Impress.js Demo with Beige Slides</title>
+    <meta name="viewport" content="width=1024">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        body {
+            background: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .step {
+            width: 800px;
+            padding: 40px;
+            border-radius: 20px;
+            background: #f5f5dc; /* light beige */
+            color: #222; /* dark text for readability */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        h1, h2 {
+            margin: 0.5em 0;
+        }
+
+        /* Collapsible slide menu */
+        .menu-wrapper {
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1200;
+            text-align: center;
+        }
+        .menu-toggle {
+            background: #4cafef;
+            border: none;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .menu-toggle:hover {
+            background: #3498db;
+        }
+        .slide-menu {
+            margin-top: 10px;
+            display: none;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 16px;
+            border-radius: 12px;
+        }
+        .slide-menu.open {
+            display: flex;
+        }
+        .slide-menu button {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .slide-menu button:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+        .slide-menu .active {
+            background: #4cafef;
+        }
+
+        /* Navigation buttons */
+        .nav-buttons {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+        .nav-buttons button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s, opacity 0.3s;
+        }
+        .nav-buttons button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 7px;
+            overflow: hidden;
+            z-index: 999;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #4cafef;
+            transition: width 0.4s ease;
+        }
+
+        /* Slide counter */
+        .progress-counter {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+            color: #fff;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Collapsible Slide Menu -->
+<div class="menu-wrapper">
+    <button class="menu-toggle" id="menuToggle">☰ Slides</button>
+    <div class="slide-menu" id="slideMenu"></div>
+</div>
+
+<div id="impress">
+
+    <div id="intro" class="step" data-x="0" data-y="0">
+        <h1>Welcome to Impress.js</h1>
+        <p>Use arrow keys, buttons, or menu to navigate.</p>
+    </div>
+
+    <div id="slide1" class="step" data-x="1000" data-y="0" data-rotate="90">
+        <h2>Slide 1</h2>
+        <p>This is the first step in the presentation.</p>
+    </div>
+
+    <div id="slide2" class="step" data-x="2000" data-y="1000" data-scale="2">
+        <h2>Slide 2</h2>
+        <p>Zooming in with <code>data-scale</code>.</p>
+    </div>
+
+    <div id="slide3" class="step" data-x="3000" data-y="-1000" data-rotate="180">
+        <h2>Slide 3</h2>
+        <p>Rotated step with <code>data-rotate</code>.</p>
+    </div>
+
+    <div id="end" class="step" data-x="4000" data-y="0" data-scale="0.5">
+        <h1>The End</h1>
+        <p>Thanks for watching!</p>
+    </div>
+
+</div>
+
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+    <button id="prevBtn" onclick="impress().prev()">⬅ Previous</button>
+    <button id="nextBtn" onclick="impress().next()">Next ➡</button>
+</div>
+
+<!-- Slide Counter -->
+<div id="progressCounter" class="progress-counter">1 / 5</div>
+
+<!-- Progress Bar -->
+<div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
+<script>
+    const steps = Array.from(document.querySelectorAll(".step"));
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const progressBar = document.getElementById("progressBar");
+    const progressCounter = document.getElementById("progressCounter");
+    const slideMenu = document.getElementById("slideMenu");
+    const menuToggle = document.getElementById("menuToggle");
+
+    // Build slide menu dynamically
+    steps.forEach((step, index) => {
+        const title = step.querySelector("h1, h2")?.innerText || `Slide ${index + 1}`;
+        const btn = document.createElement("button");
+        btn.textContent = title;
+        btn.addEventListener("click", () => {
+            impress().goto(step.id);
+            slideMenu.classList.remove("open"); // auto-close after selecting
+        });
+        slideMenu.appendChild(btn);
+    });
+
+    // Toggle menu open/close
+    menuToggle.addEventListener("click", () => {
+        slideMenu.classList.toggle("open");
+    });
+
+    impress().init();
+
+    document.addEventListener("impress:stepenter", function (event) {
+        const currentIndex = steps.indexOf(event.target);
+
+        // Hide "Previous" on first slide
+        prevBtn.classList.toggle("hidden", currentIndex === 0);
+
+        // Hide "Next" on last slide
+        nextBtn.classList.toggle("hidden", currentIndex === steps.length - 1);
+
+        // Update progress bar
+        const progress = ((currentIndex + 1) / steps.length) * 100;
+        progressBar.style.width = progress + "%";
+
+        // Update slide counter
+        progressCounter.textContent = `${currentIndex + 1} / ${steps.length}`;
+
+        // Highlight active menu button
+        Array.from(slideMenu.children).forEach((btn, i) => {
+            btn.classList.toggle("active", i === currentIndex);
+        });
+    });
+</script>
+</body>
+</html>
