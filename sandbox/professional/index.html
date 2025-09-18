@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Impress.js Presentation</title>
+    <title>NatWest Impress.js Presentation</title>
     <meta name="viewport" content="width=1024">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #502379, #341754);
+            background: linear-gradient(135deg, #502379, #341754); /* NatWest purple gradient */
             color: #333;
             font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
@@ -18,19 +18,57 @@
             width: 900px;
             padding: 50px;
             border-radius: 16px;
-            background: #fff; /* clean white for slides */
+            background: #fff;
             color: #222;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             text-align: center;
-            border-top: 6px solid #ec008c; /* pink accent */
+            border-top: 6px solid #ec008c;
+            position: relative;
         }
-        h1, h2 {
+        .step h1, .step h2 {
             margin: 0.4em 0;
             color: #502379;
         }
-        p {
+        .step p {
             font-size: 18px;
             line-height: 1.6;
+        }
+
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, #502379, #341754);
+            color: #fff;
+            border-top: none;
+            box-shadow: none;
+            border-radius: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .title-slide h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .title-slide h2 {
+            font-size: 28px;
+            font-weight: 300;
+            margin: 0;
+            color: #ff4f9a;
+        }
+
+        /* Global NatWest Logo */
+        .global-logo {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 70px;
+            height: auto;
+            z-index: 1500;
         }
 
         /* Sidebar TOC */
@@ -40,7 +78,7 @@
             left: -260px;
             width: 240px;
             height: 100%;
-            background: #341754; /* darker purple */
+            background: #341754;
             color: #fff;
             padding: 20px;
             box-shadow: 4px 0 12px rgba(0,0,0,0.5);
@@ -54,7 +92,7 @@
             margin-top: 0;
             font-size: 20px;
             margin-bottom: 15px;
-            color: #ff4f9a; /* magenta */
+            color: #ff4f9a;
         }
         .sidebar button {
             display: block;
@@ -72,7 +110,7 @@
         }
         .sidebar button:hover,
         .sidebar button.active {
-            background: #ec008c; /* pink highlight */
+            background: #ec008c;
         }
 
         /* Menu toggle button */
@@ -80,7 +118,7 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            background: #ec008c; /* pink accent */
+            background: #ec008c;
             border: none;
             color: #fff;
             width: 45px;
@@ -111,7 +149,7 @@
             z-index: 1000;
         }
         .nav-icons button {
-            background: #502379; /* purple */
+            background: #502379;
             border: none;
             color: #fff;
             width: 50px;
@@ -150,7 +188,7 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background: #ec008c; /* pink */
+            background: #ec008c;
             transition: width 0.4s ease;
         }
 
@@ -169,6 +207,10 @@
 </head>
 <body>
 
+<!-- Global NatWest Logo -->
+<img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/natwest.svg"
+     alt="NatWest Logo" class="global-logo">
+
 <!-- Sidebar TOC -->
 <div class="sidebar" id="sidebar">
     <h3>Contents</h3>
@@ -178,12 +220,20 @@
 
 <div id="impress">
 
-    <div id="intro" class="step" data-x="0" data-y="0">
-        <h1>Welcome to Acme Bank Stock</h1>
-        <p>Professional Impress.js presentation template with NatAcme Bank branding.</p>
+    <!-- Title Slide -->
+    <div id="title" class="step title-slide" data-x="0" data-y="0" data-z="0">
+        <h1>Acme Bank</h1>
+        <h2>Tech Conference Keynote</h2>
     </div>
 
-    <div id="agenda" class="step" data-x="1200" data-y="0">
+    <!-- Intro -->
+    <div id="intro" class="step" data-x="0" data-y="0" data-z="-1000">
+        <h1>Welcome</h1>
+        <p>Professional Impress.js presentation template with branding.</p>
+    </div>
+
+    <!-- Agenda -->
+    <div id="agenda" class="step" data-x="0" data-y="0" data-z="-2000">
         <h2>Agenda</h2>
         <ul style="text-align:left; font-size:18px; max-width:600px; margin:auto;">
             <li>Introduction</li>
@@ -193,17 +243,20 @@
         </ul>
     </div>
 
-    <div id="insights" class="step" data-x="2400" data-y="600" data-rotate="90">
+    <!-- Insights -->
+    <div id="insights" class="step" data-x="3600" data-y="600" data-rotate="90">
         <h2>Key Insights</h2>
         <p>Highlight your findings and critical information here.</p>
     </div>
 
-    <div id="case" class="step" data-x="3600" data-y="-600" data-rotate="-90">
+    <!-- Case Studies -->
+    <div id="case" class="step" data-x="4800" data-y="-600" data-rotate="-90">
         <h2>Case Studies</h2>
         <p>Provide real-world examples and success stories.</p>
     </div>
 
-    <div id="conclusion" class="step" data-x="4800" data-y="0" data-scale="0.8">
+    <!-- Conclusion -->
+    <div id="conclusion" class="step" data-x="6000" data-y="0" data-scale="0.8">
         <h2>Conclusion</h2>
         <p>Summarize your presentation and include a call to action.</p>
     </div>
@@ -217,7 +270,7 @@
 </div>
 
 <!-- Slide Counter -->
-<div id="progressCounter" class="progress-counter">1 / 5</div>
+<div id="progressCounter" class="progress-counter">1 / 6</div>
 
 <!-- Progress Bar -->
 <div class="progress-container">
@@ -242,7 +295,7 @@
         btn.textContent = `${index + 1}. ${title}`;
         btn.addEventListener("click", () => {
             impress().goto(step.id);
-            sidebar.classList.remove("open"); // auto-close
+            sidebar.classList.remove("open");
         });
         toc.appendChild(btn);
     });
@@ -257,20 +310,14 @@
     document.addEventListener("impress:stepenter", function (event) {
         const currentIndex = steps.indexOf(event.target);
 
-        // Hide "Previous" on first slide
         prevBtn.classList.toggle("hidden", currentIndex === 0);
-
-        // Hide "Next" on last slide
         nextBtn.classList.toggle("hidden", currentIndex === steps.length - 1);
 
-        // Update progress bar
         const progress = ((currentIndex + 1) / steps.length) * 100;
         progressBar.style.width = progress + "%";
 
-        // Update slide counter
         progressCounter.textContent = `${currentIndex + 1} / ${steps.length}`;
 
-        // Highlight active TOC entry
         Array.from(toc.children).forEach((btn, i) => {
             btn.classList.toggle("active", i === currentIndex);
         });
